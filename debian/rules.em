@@ -23,6 +23,12 @@ export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
 export @(var[0])=@(var[1])
 @[end for]@
 
+# Bootstrap python path for workspace support.
+# This is the package that provides the workspace files so they are not
+# available to source. However this package still needs to find ament_python
+# so we explicitly set the PYTHONPATH.
+export PYTHONPATH=@(InstallationPrefix)/lib/python3.5/site-packages
+
 %:
 	dh $@@ -v @(debhelper_toplevel_options)
 
