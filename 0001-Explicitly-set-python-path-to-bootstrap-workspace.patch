@@ -1,0 +1,29 @@
+From 9ba148c29536f1dc4ddf9cdf0f0f55181e856f7c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
+Date: Mon, 26 Jun 2017 16:25:28 -0400
+Subject: [PATCH] Explicitly set python path to bootstrap workspace.
+
+---
+ debian/rules.em | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index f589242..4b9444c 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -23,6 +23,12 @@ export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
+ export @(var[0])=@(var[1])
+ @[end for]@
+ 
++# Bootstrap python path for workspace support.
++# This is the package that provides the workspace files so they are not
++# available to source. However this package still needs to find ament_python
++# so we explicitly set the PYTHONPATH.
++export PYTHONPATH=@(InstallationPrefix)/lib/python3.5/site-packages
++
+ %:
+ 	dh $@@ -v @(debhelper_toplevel_options)
+ 
+-- 
+2.7.4
+
