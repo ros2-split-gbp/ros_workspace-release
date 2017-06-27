@@ -27,6 +27,7 @@ export @(var[0])=@(var[1])
 # This is the package that provides the workspace files so they are not
 # available to source. However this package still needs to find ament_python
 # so we explicitly set the PYTHONPATH.
+# We also set
 export PYTHONPATH=@(InstallationPrefix)/lib/python3.5/site-packages
 
 %:
@@ -37,7 +38,7 @@ override_dh_auto_configure:
 	# in the install tree that was dropped by catkin, and source it.  It will
 	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
 	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
-	dh_auto_configure @(debhelper_autoconfigure_options)
+	dh_auto_configure @(debhelper_autoconfigure_options) -DPYTHON_INSTALL_DIR=lib/python3.5/site-packages
 
 override_dh_auto_build:
 	# In case we're installing to a non-standard location, look for a setup.sh
