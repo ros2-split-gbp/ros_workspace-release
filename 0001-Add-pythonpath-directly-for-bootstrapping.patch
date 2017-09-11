@@ -1,0 +1,26 @@
+From 5418f772212d9d7b5b9396b3e888e865257649c5 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
+Date: Mon, 11 Sep 2017 16:37:51 -0400
+Subject: [PATCH] Add pythonpath directly for bootstrapping.
+
+---
+ debian/rules.em | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index aa010fa..70946b2 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -18,6 +18,9 @@ export PKG_CONFIG_PATH=@(InstallationPrefix)/lib/pkgconfig
+ # 	https://github.com/ros-infrastructure/bloom/issues/327
+ export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
+ 
++# Needed to bootstrap since this is the package which adds it to the path.
++export PYTHONPATH=@(InstallationPrefix)/lib/python3.5/site-packages
++
+ %:
+ 	dh $@@ -v --buildsystem=cmake
+ 
+-- 
+2.7.4
+
