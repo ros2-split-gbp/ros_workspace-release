@@ -1,4 +1,4 @@
-From 6a21ce65ba1108a1bce999790d094e2695cd2a1f Mon Sep 17 00:00:00 2001
+From 9b2e2b7541f69f844cf9bec493291b01819608f9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Mon, 11 Sep 2017 16:37:51 -0400
 Subject: [PATCH] Add pythonpath directly for bootstrapping.
