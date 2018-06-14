@@ -1,0 +1,26 @@
+From 4a40d77f147fcac8a939ca966f977bcdde1a7353 Mon Sep 17 00:00:00 2001
+From: Mikael Arguedas <mikael@osrfoundation.org>
+Date: Thu, 14 Jun 2018 08:23:12 +0200
+Subject: [PATCH] Bootstrap pythonpath.
+
+---
+ debian/rules.em | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index aa010fa..4f4ff05 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -18,6 +18,9 @@ export PKG_CONFIG_PATH=@(InstallationPrefix)/lib/pkgconfig
+ # 	https://github.com/ros-infrastructure/bloom/issues/327
+ export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
+ 
++# Needed to bootstrap since the ros_workspace package does not yet exist.
++export PYTHONPATH=/opt/ros/bouncy/lib/python3.6/site-packages
++
+ %:
+ 	dh $@@ -v --buildsystem=cmake
+ 
+-- 
+2.7.4
+
