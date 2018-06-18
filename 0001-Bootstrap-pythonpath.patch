@@ -1,4 +1,4 @@
-From 4a40d77f147fcac8a939ca966f977bcdde1a7353 Mon Sep 17 00:00:00 2001
+From 21fe89bf0f11c6e72f45762f71b90390cf8ef04f Mon Sep 17 00:00:00 2001
 From: Mikael Arguedas <mikael@osrfoundation.org>
 Date: Thu, 14 Jun 2018 08:23:12 +0200
 Subject: [PATCH] Bootstrap pythonpath.
