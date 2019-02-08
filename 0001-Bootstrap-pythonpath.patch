@@ -1,4 +1,4 @@
-From 19c720e34e7e0808450111df34358fc88fe1b6ec Mon Sep 17 00:00:00 2001
+From d91434d6d63ed00fd02ebc4f7e828db44d5b896e Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Wed, 14 Nov 2018 19:54:59 -0800
 Subject: [PATCH] Bootstrap pythonpath.
