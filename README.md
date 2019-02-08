@@ -1,3 +1,26 @@
+## ros_workspace (crystal) - 0.6.1-0
+
+The packages in the `ros_workspace` repository were released into the `crystal` distro by running `/usr/bin/bloom-release -r crystal ros_workspace --override-release-repository-push-url git@github.com:ros2-gbp/ros_workspace-release` on `Fri, 08 Feb 2019 06:34:28 -0000`
+
+The `ros_workspace` package was released.
+
+Version of package(s) in repository `ros_workspace`:
+
+- upstream repository: https://github.com/ros2/ros_workspace.git
+- release repository: https://github.com/ros2-gbp/ros_workspace-release.git
+- rosdistro version: `0.6.0-1`
+- old version: `0.6.0-1`
+- new version: `0.6.1-0`
+
+Versions of tools used:
+
+- bloom version: `0.7.2`
+- catkin_pkg version: `0.4.10`
+- rosdep version: `0.15.0`
+- rosdistro version: `0.7.2`
+- vcstools version: `0.1.40`
+
+
 ## ros_workspace (crystal) - 0.6.0-1
 
 The packages in the `ros_workspace` repository were released into the `crystal` distro by running `/home/steven/osrf/venv/bloom-py2-dev/bin/bloom-release -r crystal ros_workspace --override-release-repository-push-url git@github.com:ros2-gbp/ros_workspace-release` on `Thu, 15 Nov 2018 03:56:12 -0000`
