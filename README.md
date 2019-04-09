@@ -1,3 +1,26 @@
+## ros_workspace (dashing) - 0.7.0-0
+
+The packages in the `ros_workspace` repository were released into the `dashing` distro by running `/home/steven/osrf/bloom/myscripts/py3env/bin/bloom-release -n -r dashing ros_workspace --override-release-repository-push-url git@github.com:ros2-gbp/ros_workspace-release` on `Tue, 09 Apr 2019 14:59:30 -0000`
+
+The `ros_workspace` package was released.
+
+Version of package(s) in repository `ros_workspace`:
+
+- upstream repository: https://github.com/nuclearsandwich/ros_workspace.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.7.0-0`
+
+Versions of tools used:
+
+- bloom version: `0.8.0.dev0`
+- catkin_pkg version: `0.4.11`
+- rosdep version: `0.15.1`
+- rosdistro version: `0.7.3`
+- vcstools version: `0.1.40`
+
+
 ## ros_workspace (crystal) - 0.6.1-0
 
 The packages in the `ros_workspace` repository were released into the `crystal` distro by running `/usr/bin/bloom-release -r crystal ros_workspace --override-release-repository-push-url git@github.com:ros2-gbp/ros_workspace-release` on `Fri, 08 Feb 2019 06:34:28 -0000`
