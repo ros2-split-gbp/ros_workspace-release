@@ -2,8 +2,10 @@
 Changelog for package ros_workspace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.7.2 (2019-10-11)
+
+0.8.0 (2019-10-11)
 ------------------
+* Added .dsv file generation for PYTHONPATH. (`#16 <https://github.com/ros2/ros_workspace/issues/16>`_)
 * Added support for ament_package installed with setup.py develop. (`#15 <https://github.com/ros2/ros_workspace/issues/15>`_)
 * Contributors: Dirk Thomas
 
