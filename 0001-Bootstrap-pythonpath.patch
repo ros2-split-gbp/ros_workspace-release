@@ -1,4 +1,4 @@
-From b103da8d68f39c2d6d7d8c3abc9edb64eaed7dde Mon Sep 17 00:00:00 2001
+From 9b97aed38708fc86856fc63746f4d41a30b82e21 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Wed, 14 Nov 2018 19:54:59 -0800
 Subject: [PATCH] Bootstrap pythonpath.
@@ -22,5 +22,5 @@ index aa010fa..cfea54f 100755
  	dh $@@ -v --buildsystem=cmake
  
 -- 
-2.17.1
+2.23.0
 
