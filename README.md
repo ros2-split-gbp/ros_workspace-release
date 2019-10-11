@@ -1,3 +1,26 @@
+## ros_workspace (dashing) - 0.7.2-1
+
+The packages in the `ros_workspace` repository were released into the `dashing` distro by running `/usr/bin/bloom-release -e -r dashing ros_workspace --override-release-repository-push-url git@github.com:ros2-gbp/ros_workspace-release` on `Fri, 11 Oct 2019 20:59:37 -0000`
+
+The `ros_workspace` package was released.
+
+Version of package(s) in repository `ros_workspace`:
+
+- upstream repository: https://github.com/nuclearsandwich/ros_workspace.git
+- release repository: https://github.com/ros2-gbp/ros_workspace-release.git
+- rosdistro version: `0.7.1-1`
+- old version: `0.7.1-1`
+- new version: `0.7.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.13`
+- rosdep version: `0.16.1`
+- rosdistro version: `0.7.4`
+- vcstools version: `0.1.42`
+
+
 ## ros_workspace (eloquent) - 0.7.1-2
 
 The packages in the `ros_workspace` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --rosdistro eloquent --new-track --track eloquent ros_workspace` on `Thu, 27 Jun 2019 21:53:27 -0000`
