@@ -1,0 +1,27 @@
+From 5150d43c6dde252afe5924b7fcf9f57680749e80 Mon Sep 17 00:00:00 2001
+From: Jacob Perron <jacob@openrobotics.org>
+Date: Tue, 28 Jan 2020 11:50:37 -0800
+Subject: [PATCH] Migrate patch from Eloquent
+
+Signed-off-by: Jacob Perron <jacob@openrobotics.org>
+---
+ debian/rules.em | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index aa010fa..cfea54f 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -18,6 +18,9 @@ export PKG_CONFIG_PATH=@(InstallationPrefix)/lib/pkgconfig
+ # 	https://github.com/ros-infrastructure/bloom/issues/327
+ export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
+ 
++# Needed to bootstrap since the ros_workspace package does not yet exist.
++export PYTHONPATH=@(InstallationPrefix)/lib/python3.6/site-packages
++
+ %:
+ 	dh $@@ -v --buildsystem=cmake
+ 
+-- 
+2.17.1
+
