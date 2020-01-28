@@ -21,6 +21,9 @@ export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
 # Solve shlibdeps errors in REP136 packages that use GNUInstallDirs:
 export DEB_HOST_MULTIARCH := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
+# Needed to bootstrap since the ros_workspace package does not yet exist.
+export PYTHONPATH=@(InstallationPrefix)/lib/python3.6/site-packages
+
 %:
 	dh $@@ -v --buildsystem=cmake
 
