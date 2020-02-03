@@ -22,7 +22,7 @@ export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
 export DEB_HOST_MULTIARCH := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 # Needed to bootstrap since the ros_workspace package does not yet exist.
-export PYTHONPATH=@(InstallationPrefix)/lib/python3.6/site-packages
+export PYTHONPATH=@(InstallationPrefix)/lib/python3.8/site-packages:@(InstallationPrefix)/lib/python3.7/site-packages
 
 %:
 	dh $@@ -v --buildsystem=cmake
