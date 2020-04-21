@@ -19,7 +19,7 @@ export PKG_CONFIG_PATH=@(InstallationPrefix)/lib/pkgconfig
 export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
 
 # Needed to bootstrap since the ros_workspace package does not yet exist.
-export PYTHONPATH=@(InstallationPrefix)/lib/python3.8/site-packages:@(InstallationPrefix)/lib/python3.7/site-packages
+export PYTHONPATH=@(InstallationPrefix)/lib/python3.8/site-packages
 
 %:
 	dh $@@ -v --buildsystem=cmake
