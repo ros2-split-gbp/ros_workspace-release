@@ -1,3 +1,26 @@
+## ros_workspace (foxy) - 0.8.0-4
+
+The packages in the `ros_workspace` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy ros_workspace` on `Tue, 21 Apr 2020 23:19:08 -0000`
+
+The `ros_workspace` package was released.
+
+Version of package(s) in repository `ros_workspace`:
+
+- upstream repository: https://github.com/ros2/ros_workspace.git
+- release repository: https://github.com/ros2-gbp/ros_workspace-release.git
+- rosdistro version: `0.8.0-3`
+- old version: `0.8.0-3`
+- new version: `0.8.0-4`
+
+Versions of tools used:
+
+- bloom version: `0.9.3`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## ros_workspace (foxy) - 0.8.0-3
 
 The packages in the `ros_workspace` repository were released into the `foxy` distro by running `/usr/bin/bloom-release ros_workspace -r foxy` on `Mon, 03 Feb 2020 17:08:27 -0000`
