@@ -7,7 +7,13 @@ find_package(ament_cmake_core REQUIRED)
 execute_process(COMMAND python3 -c "from distutils import sysconfig; print(sysconfig.get_python_version())" OUTPUT_VARIABLE PYTHON_MAJOR_MINOR OUTPUT_STRIP_TRAILING_WHITESPACE)
 
 # Locate ament_package template files.
-set(PYTHON_INSTALL_DIR "lib/python${PYTHON_MAJOR_MINOR}/site-packages")
+if(WIN32)
+  set(PYTHON_INSTALL_DIR "lib/site-packages")
+  set(SHELL_EXT "bat")
+else()
+  set(PYTHON_INSTALL_DIR "lib/python${PYTHON_MAJOR_MINOR}/site-packages")
+  set(SHELL_EXT "sh")
+endif()
 set(AMENT_PACKAGE_DIR "${CMAKE_INSTALL_PREFIX}/${PYTHON_INSTALL_DIR}/ament_package")
 if(NOT EXISTS "${AMENT_PACKAGE_DIR}")
   # Check for an .egg-link file and use the listed directory if it exists
@@ -24,9 +30,8 @@ if(NOT EXISTS "${AMENT_PACKAGE_DIR}")
   endif()
 endif()
 set(AMENT_PACKAGE_TEMPLATE_DIR "${AMENT_PACKAGE_DIR}/template")
-set(BINARY_PATH_HOOK "${AMENT_PACKAGE_TEMPLATE_DIR}/environment_hook/path.sh")
-set(LIBRARY_PATH_HOOK "${AMENT_PACKAGE_TEMPLATE_DIR}/environment_hook/library_path.sh")
-set(PYTHONPATH_HOOK "${AMENT_PACKAGE_TEMPLATE_DIR}/environment_hook/pythonpath.sh.in")
+set(BINARY_PATH_HOOK "${AMENT_PACKAGE_TEMPLATE_DIR}/environment_hook/path.${SHELL_EXT}")
+set(PYTHONPATH_HOOK "${AMENT_PACKAGE_TEMPLATE_DIR}/environment_hook/pythonpath.${SHELL_EXT}.in")
 
 # register information for .dsv generation
 set(
@@ -34,7 +39,28 @@ set(
   "prepend-non-duplicate;PYTHONPATH;${PYTHON_INSTALL_DIR}")
 
 # Set environment hooks for default environment.
-ament_environment_hooks("${BINARY_PATH_HOOK}" "${LIBRARY_PATH_HOOK}" "${PYTHONPATH_HOOK}")
+if(WIN32)
+  ament_environment_hooks("${BINARY_PATH_HOOK}" "${PYTHONPATH_HOOK}")
+else()
+  set(LIBRARY_PATH_HOOK "${AMENT_PACKAGE_TEMPLATE_DIR}/environment_hook/library_path.${SHELL_EXT}")
+  # Collect machine architecture triplet for libraries using GNU install dirs
+  execute_process(COMMAND gcc -dumpmachine OUTPUT_VARIABLE MULTIARCH_TRIPLET OUTPUT_STRIP_TRAILING_WHITESPACE)
+  # register multiarch information for .dsv generation
+  if(APPLE)
+    set(LIBRARY_PATH_ENV_VAR "DYLD_LIBRARY_PATH")
+  else()
+    set(LIBRARY_PATH_ENV_VAR "LD_LIBRARY_PATH")
+  endif()
+  set(
+    AMENT_CMAKE_ENVIRONMENT_HOOKS_DESC_multiarch_library_paths
+    "prepend-non-duplicate;${LIBRARY_PATH_ENV_VAR};lib/${MULTIARCH_TRIPLET}")
+  ament_environment_hooks("${BINARY_PATH_HOOK}" "${LIBRARY_PATH_HOOK}" "${PYTHONPATH_HOOK}" "env-hooks/multiarch_library_paths.sh.in")
+endif()
+
+# skip using ament_index/resource_index/parent_prefix_path
+# if for Debian packages it is known that there are no underlays
+# note the template only checks for an empty (use) / non-empty (skip) string
+set(SKIP_PARENT_PREFIX_PATH "SKIP_PARENT_PREFIX_PATH")
 
 ament_package()
 ament_generate_environment()
