@@ -2,6 +2,16 @@
 Changelog for package ros_workspace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.1 (2020-06-05)
+------------------
+* set flag to skip parent_prefix_path (`#19 <https://github.com/ros2/ros_workspace/issues/19>`_)
+* Contributors: Dirk Thomas
+
+1.0.0 (2020-05-12)
+------------------
+* Extend library path to have multiarch directory (`#18 <https://github.com/ros2/ros_workspace/issues/18>`_)
+* Enable Windows build. (`#17 <https://github.com/ros2/ros_workspace/issues/17>`_)
+* Contributors: Jacob Perron, Sean Yen
 
 0.8.0 (2019-10-11)
 ------------------
