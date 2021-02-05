@@ -1,3 +1,26 @@
+## ros_workspace (rolling) - 1.0.2-1
+
+The packages in the `ros_workspace` repository were released into the `rolling` distro by running `/usr/bin/bloom-release ros_workspace -r rolling` on `Fri, 05 Feb 2021 02:48:43 -0000`
+
+The `ros_workspace` package was released.
+
+Version of package(s) in repository `ros_workspace`:
+
+- upstream repository: https://github.com/ros2/ros_workspace.git
+- release repository: https://github.com/ros2-gbp/ros_workspace-release.git
+- rosdistro version: `1.0.1-2`
+- old version: `1.0.1-2`
+- new version: `1.0.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.1`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## ros_workspace (eloquent) - 1.0.1-1
 
 The packages in the `ros_workspace` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release -r eloquent -t eloquent ros_workspace` on `Fri, 05 Jun 2020 18:14:04 -0000`
