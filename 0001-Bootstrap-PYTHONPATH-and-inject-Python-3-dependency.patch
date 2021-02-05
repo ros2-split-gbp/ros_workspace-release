@@ -1,4 +1,4 @@
-From eb1e1853a49126ba0be9e8b6c9d0d4fe672e4a3f Mon Sep 17 00:00:00 2001
+From fdfccb187b843933466caf6c562669710e920f3b Mon Sep 17 00:00:00 2001
 From: Scott K Logan <logans@cottsay.net>
 Date: Tue, 19 Jan 2021 18:25:01 -0800
 Subject: [PATCH] Bootstrap PYTHONPATH and inject Python 3 dependency
