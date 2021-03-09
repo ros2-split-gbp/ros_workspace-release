@@ -1,4 +1,4 @@
-From fdfccb187b843933466caf6c562669710e920f3b Mon Sep 17 00:00:00 2001
+From 229ad3bd5e6358919ae73a54ddb37b939f5860ec Mon Sep 17 00:00:00 2001
 From: Scott K Logan <logans@cottsay.net>
 Date: Tue, 19 Jan 2021 18:25:01 -0800
 Subject: [PATCH] Bootstrap PYTHONPATH and inject Python 3 dependency
@@ -12,7 +12,7 @@ Signed-off-by: Scott K Logan <logans@cottsay.net>
  1 file changed, 15 insertions(+)
 
 diff --git a/rpm/template.spec.em b/rpm/template.spec.em
-index c0d00ea..99b821f 100644
+index d0a9b7c..f485879 100644
 --- a/rpm/template.spec.em
 +++ b/rpm/template.spec.em
 @@ -24,6 +24,12 @@ Source0:        %{name}-%{version}.tar.gz
@@ -38,7 +38,7 @@ index c0d00ea..99b821f 100644
  # In case we're installing to a non-standard location, look for a setup.sh
  # in the install tree and source it.  It will set things like
  # CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
-@@ -51,6 +60,9 @@ mkdir -p obj-%{_target_platform} && cd obj-%{_target_platform}
+@@ -50,6 +59,9 @@ mkdir -p obj-%{_target_platform} && cd obj-%{_target_platform}
  %make_build
  
  %install
@@ -48,7 +48,7 @@ index c0d00ea..99b821f 100644
  # In case we're installing to a non-standard location, look for a setup.sh
  # in the install tree and source it.  It will set things like
  # CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
-@@ -59,6 +71,9 @@ if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.
+@@ -58,6 +70,9 @@ if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.
  
  %if 0%{?with_tests}
  %check
