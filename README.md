@@ -1,3 +1,26 @@
+## ros_workspace (rolling) - 1.0.2-3
+
+The packages in the `ros_workspace` repository were released into the `rolling` distro by running `/home/steven/osrf/bloom/.direnv/python-3.10.2/bin/bloom-release -r rolling ros_workspace --override-release-repository-push-url git@github.com:ros2-gbp/ros_workspace-release` on `Thu, 10 Feb 2022 22:54:53 -0000`
+
+The `ros_workspace` package was released.
+
+Version of package(s) in repository `ros_workspace`:
+
+- upstream repository: https://github.com/ros2/ros_workspace.git
+- release repository: https://github.com/ros2-gbp/ros_workspace-release.git
+- rosdistro version: `1.0.2-2`
+- old version: `1.0.2-2`
+- new version: `1.0.2-3`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## ros_workspace (rolling) - 1.0.2-1
 
 The packages in the `ros_workspace` repository were released into the `rolling` distro by running `/usr/bin/bloom-release ros_workspace -r rolling` on `Fri, 05 Feb 2021 02:48:43 -0000`
