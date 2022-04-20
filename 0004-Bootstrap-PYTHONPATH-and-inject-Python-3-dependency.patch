@@ -1,8 +1,8 @@
-From a3e949ccd2d7463363daa2ab73d77fedb2fe62a7 Mon Sep 17 00:00:00 2001
+From 5bcf25047df17960378d05417dadb00d499d3ad9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?=
  <nuclearsandwich@users.noreply.github.com>
 Date: Thu, 10 Feb 2022 17:15:09 -0500
-Subject: [PATCH] Bootstrap PYTHONPATH and inject Python 3 dependency.
+Subject: [PATCH 04/10] Bootstrap PYTHONPATH and inject Python 3 dependency.
 
 Co-authored-by: Scott K Logan <logans@cottsay.net>
 ---
@@ -57,5 +57,5 @@ index de5e5a7..1773b89 100644
  TEST_TARGET=$(%__make -qp -C obj-%{_target_platform} | sed "s/^\(test\|check\):.*/\\1/;t f;d;:f;q0")
  if [ -n "$TEST_TARGET" ]; then
 -- 
-2.35.1
+2.35.3
 
