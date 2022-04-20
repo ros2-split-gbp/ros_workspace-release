@@ -1,8 +1,8 @@
-From 4324e0b561460afe5684a2b2242211643c6ead4a Mon Sep 17 00:00:00 2001
+From 3e4e32b65a8460a11de497daf3c029fa9c5d4060 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?=
  <nuclearsandwich@users.noreply.github.com>
 Date: Thu, 10 Feb 2022 17:47:27 -0500
-Subject: [PATCH 1/2] Restore PYTHONPATH bootstrap patch.
+Subject: [PATCH 09/20] Restore PYTHONPATH bootstrap patch.
 
 ---
  debian/rules.em | 3 +++
@@ -23,5 +23,5 @@ index 3342408..730106c 100755
  	dh $@@ -v --buildsystem=cmake
  
 -- 
-2.35.1
+2.35.3
 

@@ -1,0 +1,27 @@
+From 57450fbc8ae6b447f3c9ff8ae7804db877f8cc6a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?=
+ <nuclearsandwich@users.noreply.github.com>
+Date: Thu, 10 Feb 2022 17:47:27 -0500
+Subject: [PATCH 06/20] Restore PYTHONPATH bootstrap patch.
+
+---
+ debian/rules.em | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index 3342408..730106c 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -21,6 +21,9 @@ export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
+ # Solve shlibdeps errors in REP136 packages that use GNUInstallDirs:
+ export DEB_HOST_MULTIARCH := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+ 
++# Needed to bootstrap since the ros_workspace package does not yet exist.
++export PYTHONPATH=@(InstallationPrefix)/lib/python3.9/site-packages:@(InstallationPrefix)/lib/python3.8/site-packages
++
+ %:
+ 	dh $@@ -v --buildsystem=cmake
+ 
+-- 
+2.35.3
+
