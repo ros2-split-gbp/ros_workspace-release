@@ -135,7 +135,7 @@ tracks:
       :{release_inc}
     devel_branch: latest
     last_release: latest
-    last_version: 1.0.1
+    last_version: 1.0.2
     name: upstream
     patches: null
     release_inc: '1'
