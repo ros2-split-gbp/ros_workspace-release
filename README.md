@@ -1,3 +1,26 @@
+## ros_workspace (foxy) - 1.0.2-1
+
+The packages in the `ros_workspace` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy ros_workspace` on `Tue, 09 Aug 2022 19:23:17 -0000`
+
+The `ros_workspace` package was released.
+
+Version of package(s) in repository `ros_workspace`:
+
+- upstream repository: https://github.com/ros2/ros_workspace.git
+- release repository: https://github.com/ros2-gbp/ros_workspace-release.git
+- rosdistro version: `1.0.1-1`
+- old version: `1.0.1-1`
+- new version: `1.0.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.1`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## ros_workspace (humble) - 1.0.2-2
 
 The packages in the `ros_workspace` repository were released into the `humble` distro by running `/usr/bin/bloom-release -r humble ros_workspace` on `Thu, 19 May 2022 23:07:51 -0000`
