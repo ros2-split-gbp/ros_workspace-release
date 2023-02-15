@@ -263,10 +263,10 @@ tracks:
       :{release_inc} --os-name rhel
     devel_branch: latest
     last_release: latest
-    last_version: 1.0.2
+    last_version: 1.0.3
     name: upstream
     patches: null
-    release_inc: '5'
+    release_inc: '1'
     release_repo_url: git@github.com:ros2-gbp/ros_workspace-release
     release_tag: latest
     ros_distro: rolling
